@@ -1,0 +1,6 @@
+.headbar{
+    background-image: url('./assets/images/Poster.svg');
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+}
