@@ -19,11 +19,17 @@ export default function Navbar() {
             </form>
           </li>
           <li className='navbarItemMenu'>
-            <li className="auth">Sign In</li>
-            <li className="hamburger">
-              <li className="bar"></li>
-              <li className="bar"></li>
-            </li>
+           <div className="navbarItemMenu-wrapper">
+
+            <span className="auth">Sign In</span>
+            <span className="hamburger">
+              <div className="bar-wrapper">
+              <div className="bar"></div>
+              <div className="bar"></div>
+              </div>
+            </span>
+            </div>
+         
           </li>
         </ul>
       </div>

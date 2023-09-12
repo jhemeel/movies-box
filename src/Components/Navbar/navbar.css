@@ -69,10 +69,17 @@
     color: #D1D5DB;
 }
 .navbarItemMenu{
-    display: flex;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+
+}
+.navbarItemMenu-wrapper{
+    display: inherit;
+    align-items: center;
+    gap: 27px;
     /* width: 114px; */
-    height: 36px;
-    text-align: right;
+    /* height: 36px; */
 }
 
 .navbarItemMenu .auth{
@@ -84,12 +91,26 @@
 
 }
 
+.hamburger{
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: #BE123C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
 .navbarItemMenu .bar{
-    /* display: block; */
-    width: 18px;
+    display: block;
+    width: 16.8px;
     height: 2px;
     background-color: white;
-    margin-top: 3px;
-    
+    margin-top: 4px;
+    margin-bottom: 4px;
+   
     
 }
