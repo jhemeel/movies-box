@@ -1,0 +1,28 @@
+.moviecard-container{
+    height: 500px;
+    width: 33%;
+    transition: 0.4s;
+    /* padding: 1rem; */
+}
+
+.moviecard-container:hover{
+    transform: scale(1.05);
+}
+
+.moviecard{
+    width: 100%;
+    height: 350px;
+}
+
+.movie-image-box{
+    width: 100%;
+    height: 100%;
+}
+
+.movie-image-box img{
+    max-width: 100%;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    position: center center;
+}

@@ -3,6 +3,7 @@ import './navbar.css'
 import navbarLogo from './assets/images/tv.svg'
 import {Search} from '@mui/icons-material'
 
+
 export default function Navbar() {
   return (
     <div className='navbar'>
@@ -14,8 +15,8 @@ export default function Navbar() {
           </li>
           <li className='navbarItemSearch'>
             <form action="" method="get">
-              <input type="search" name="movie-search" id="" placeholder='What do you want to watch?' />
-              <Search className='search'/>
+              <input type="search" name="term" id="" placeholder='What do you want to watch?' />
+              <Search className='search'role="submit"/>
             </form>
           </li>
           <li className='navbarItemMenu'>
