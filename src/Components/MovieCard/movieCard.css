@@ -1,6 +1,6 @@
 .moviecard-container{
     height: 500px;
-    width: 33%;
+    width: 300px;
     transition: 0.4s;
     /* padding: 1rem; */
 }
