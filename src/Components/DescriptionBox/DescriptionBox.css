@@ -1,0 +1,58 @@
+.DescriptionBox{
+    height: 285px;
+    width: 404px;
+    position: relative;
+    top: 158px;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+
+}
+.DescriptionBox > div:first-child{
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.DescriptionBox > div:nth-child(2){
+    width: 184px;
+    height: 17px;
+}
+.DescriptionBox > div:nth-child(2) .imdb{
+
+}
+.DescriptionBox > div:nth-child(2) .rotten-tomatoe{
+
+}
+
+.DescriptionBox > div:nth-child(3){
+    width: 302px;
+    height: 72px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.trailer-btn{
+    width: 169px;
+    height: 36px;
+    padding: 6px 16px 6px 16px;
+    border-radius: 6px;
+    background-color: #BE123C;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.trailer-btn:hover{
+    background-color: #ffffff;
+    color: #BE123C;
+    border-color: #BE123C ;
+}

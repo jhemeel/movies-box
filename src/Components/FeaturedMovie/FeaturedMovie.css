@@ -1,16 +1,14 @@
-.FeaturedMovie-container{
+.FeaturedMovie-Container{
     padding-left: 5%;
     padding-right: 5%;
+    /* 98px */
     
 }
 
 .FeaturedMovie{
-    margin: 50px auto;
-    margin-top: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 30px;
-   
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+   gap: 50px;
 }
 
 

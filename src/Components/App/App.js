@@ -4,6 +4,9 @@ import Home from "../../Pages/Home/Home";
 import Detail from "../../Pages/Detail/Detail";
 
 function App() {
+  document.addEventListener("scroll", () => {
+   
+  });
   return (
     <div className="App">
       <Router>

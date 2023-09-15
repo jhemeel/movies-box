@@ -5,6 +5,7 @@ import {Search} from '@mui/icons-material'
 
 
 export default function Navbar() {
+ 
   return (
     <div className='navbar'>
       <div className="navbar-wrapper">

@@ -1,29 +1,24 @@
-.moviecard-container{
-    height: 500px;
-    width: 300px;
-    margin-left: auto;
-    transition: 0.4s;
-    /* padding: 1rem; */
-}
-
-.moviecard-container:hover{
-    transform: scale(1.05);
-}
-
 .moviecard{
-    width: 100%;
-    height: 450px;
+    width: 250px;
+    height: 490px;
+    display: grid;
+    border-radius: 6px;
 }
 
 .movie-image-box{
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: 370px;
 }
 
 .movie-image-box img{
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     position: center center;
+}
+
+.movie-detail-box{
+    color: grey;
+    /* height: 200px; */
 }

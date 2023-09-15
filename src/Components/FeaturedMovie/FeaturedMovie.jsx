@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import "./FeaturedMovie.css";
-import axios from "axios";
+import tmdb from "../Api/tmdb";
 
 export default function FeaturedMovie() {
   const [movies, setMovies] = useState([]);
 
   const getMovies = async () => {
     try {
-      const {data} = await axios.get(
-        "https://api.themoviedb.org/3/discover/movie?api_key=7dd454aad5387b45073594083e0f432b"
-      );
-      setMovies(data.results.slice(0, 10))
-      console.log(data.results)
-      
+      const { data } = await tmdb.get("discover/movie");
+      setMovies(data.results.slice(0, 10));
+      console.log(data.results);
     } catch (err) {
       console.log(err);
     }
@@ -24,7 +21,7 @@ export default function FeaturedMovie() {
   }, []);
 
   return (
-    <div className="FeaturedMovie-container">
+    <div className="FeaturedMovie-Container">
       <h2 className="heading-1">Featured Movies</h2>
       <div className="FeaturedMovie">
         {movies &&
