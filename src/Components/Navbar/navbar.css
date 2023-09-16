@@ -4,14 +4,15 @@
     right: 0;
     left: 0;
     z-index: 999;
+    width: 100%;
 }
 
 .navbar.active{
     background-color: #BE123C;
 }
 .navbar-wrapper{
-    padding-left: 95px; ;
-    padding-right: 95px;
+    padding-left: 5%; ;
+    padding-right: 5%;
 }
 .navbarItem{
     height: 80px;
@@ -28,21 +29,7 @@
 .navbarItem li:last-child{
     flex: 3.5;
 }
-.navbarItemLogo{
-    width: 186px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-top: 15px;
-}
-.navbarItemLogo span{
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #D1D5DB;
 
-}
 
 .navbarItemSearch{
     width: 525px;
@@ -98,7 +85,7 @@
 
 }
 
-.hamburger{
+.Hamburger{
     height: 36px;
     width: 36px;
     border-radius: 50%;
@@ -130,12 +117,29 @@
     }
 }
 @media screen and (max-width: 768px) {
+
     .navbarItemLogo{
-        width: 100px;
-        justify-content: center;
+        width: 186px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 15px;
+    }
+    .navbarItemLogo span{
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #D1D5DB;
+    
+    }
+
+
+
+    .navbarItemLogo{
+        /* width: 100px; */
         gap: 8px;
         height: initial;
-        flex-direction: column;
     }
     .navbarItemLogo span{
         font-size: 20px;
@@ -147,7 +151,17 @@
         width: 40px;
         height: 40px;
     }
+    
+}
+
+
+@media screen and (max-width: 480px) {
     .auth{
+        position: fixed;
+        transform: translateX(100%);
+    }
+    .navbarItemSearch{
+        position: fixed;
         transform: translateX(100%);
     }
 }

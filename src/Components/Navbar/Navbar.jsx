@@ -48,7 +48,7 @@ export default function Navbar() {
            <div className="navbarItemMenu-wrapper">
 
             <span className="auth">Sign In</span>
-            <span className="hamburger">
+            <span className="Hamburger">
               <div className="bar-wrapper">
               <div className="bar"></div>
               <div className="bar"></div>

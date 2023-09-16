@@ -376,6 +376,7 @@
 
 }
 
+
 .hamburger{
     display: none;
 }
@@ -466,9 +467,7 @@
         max-width: 100%;
     }
 
-    .hamburger{
-        display: block;
-    }
+    
     .hamburger{
         height: 36px;
         width: 36px;
