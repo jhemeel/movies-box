@@ -508,9 +508,16 @@
         display: block;
         margin-bottom: 0.5rem;
     }
+    .rating button{
+        background-color: #ffffff;
+        color: #BE123C;
+        border: 1px solid;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 
     .rating strong{
-        background-color: #BE123C;
+        display: none;
 
     }
     
