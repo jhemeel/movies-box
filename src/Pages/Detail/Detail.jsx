@@ -39,7 +39,7 @@ export default function Detail() {
     getMovie();
   }, []);
 
-  const { title, release_date, poster_path, overview, vote_count, vote_average } = movie;
+  const { title, release_date, poster_path, overview, vote_count, vote_average, runtime } = movie;
   
 
   // date to utc
@@ -121,7 +121,7 @@ export default function Detail() {
             <span className="movie-meta-items" data-testid = "movie-title">{title}</span>
             <span className="movie-meta-items" data-testid =  "movie-release-date">{utc_time}</span>
             <span className="movie-meta-items hide-mobile">PG - 13</span>
-            <span className="movie-meta-items runtime" data-testid= "movie-runtime">{Runtime()}</span>
+            <span className="movie-meta-items runtime" data-testid= "movie-runtime">{runtime} mins</span>
             <div className="movie-meta-items">
               <button>Action</button>
               <button>Drama</button>
