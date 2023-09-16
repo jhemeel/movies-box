@@ -1,8 +1,25 @@
 import React, { useState, useEffect } from "react";
-// import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Card } from "@mui/material";
+import { ArrowDownward, Book, Camera, Home, Movie } from "@mui/icons-material";
 import tmdb from "../../Components/Api/tmdb";
+import "./details.css";
+import img from "../../Components/Navbar/assets/images/tv.svg";
+import home from "../../Assets/Home.svg";
+import Bookmarks from "../../Assets/Bookmark.svg";
+import Calender from "../../Assets/Calendar.svg";
+import Ellipse from "../../Assets/Ellipse.svg";
+import icon from "../../Assets/Icon.svg";
+import List_1 from "../../Assets/Lists.svg";
+import List from "../../Assets/List.svg";
+import logout from "../../Assets/Logout.svg";
+import Projector from "../../Assets/Projector.svg";
+import image from "../../Assets/1.svg";
+import Play from "../../Assets/Play.svg";
+import PngItem from "../../Assets/PngItem.svg";
+import star from "../../Assets/Star.svg";
+import TV_Show from "../../Assets/TV_Show.svg";
+
 
 export default function Detail() {
   const [movie, setMovie] = useState({});
@@ -11,7 +28,6 @@ export default function Detail() {
   const getMovie = async () => {
     try {
       const { data } = await tmdb.get(`movie/${id}`);
-      console.log(data);
       setMovie(data);
     } catch (err) {
       console.log(err);
@@ -20,26 +36,126 @@ export default function Detail() {
 
   useEffect(() => {
     getMovie();
-  },[]);
+  }, []);
 
-  const {title, release_date,  poster_path, overview} = movie
+  const { title, release_date, poster_path, overview, vote_count, vote_average } = movie;
 
   return (
-   
-          <Card className="movieDetail-container">
-            <div className="movieDetail-wrapper">
-              <div className="moviecard">
+    <div className="movieDetail-container">
+      <div className="movieDetail-wrapper">
+        <div className="sidebar">
+          <div className="brandname">   
+            <img src={img} alt="" />
+            <span>Movie Box</span>
+          </div>
+          <ul className="menu">
+            <li className="menu-list">
+              <a href="/">
+                <img src={home} alt="" />
+                Home
+              </a>
+            </li>
+            <li className="menu-list">
+              <a href="">
+                <img src={Projector} alt="" />
+                Movies
+              </a>
+            </li>
+            <li className="menu-list">
+              <a href="">
+                <img src={TV_Show} alt="" />
+                TV Series
+              </a>
+            </li>
+            <li className="menu-list">
+              <a href="">
+                <img src={Calender} alt="" />
+                Upcoming
+              </a>
+            </li>
+          </ul>
+          <div className="ticket">
+            <p>
+              Play movie quizes <br /> and earn <br /> free tickets
+            </p>
+            <p>50k people are playing now</p>
+            <p>
+              <button>start playing</button>
+            </p>
+          </div>
+
+          <div className="logout">
+            <button>
+              {" "}
+              <img src={logout} alt="" /> Logout
+            </button>
+          </div>
+          <span className="hamburger">
+              <div className="bar-wrapper">
+              <div className="bar"></div>
+              <div className="bar"></div>
+              </div>
+          </span>
+        </div>
+        <div className="movie-details">
+          <div className="trailer">
+            <div className="movie-play">
+              <span>Watch Trailer
                 <div className="image-box">
-                  <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} style={{width: "250px", height: '300px'}} alt="" />
+                <img src={Play} alt="" />
                 </div>
-                <div className="movie-detail-box">
-                  <h1>{title}</h1>
-                  <p>{release_date}</p>
-                  <p>{overview}</p>
-                </div>
+              </span>
+              <img className="poster" src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
+            </div>
+          </div>
+          <div className="movie-meta">
+            <div>
+            <span className="movie-meta-items">{title}</span>
+            <span className="movie-meta-items">{release_date}</span>
+            <span className="movie-meta-items hide-mobile">PG - 13</span>
+            <span className="movie-meta-items hide-mobile">2h 10m</span>
+            <div className="movie-meta-items">
+              <button>Action</button>
+              <button>Drama</button>
+            </div>
+            </div>
+           
+            <div className="movie-meta-items">
+              <span className="star-container"><img className="star" src={star} alt="" /> {vote_average}</span>
+              <span className="hide-mobile">| {vote_count}</span>
+            </div>
+          </div>
+          <div className="movie-description">
+           <div className="left-box">
+           <div className="overview">
+              <p>{overview}</p>
+            </div>
+            <div className="extra-description">
+              <p>Directors : <span>Josep Josinski</span></p>
+              <p>Writers : <span>Jim cash, Jemeel, Adekunle</span></p>
+              <p>Stars: <span>Tom Cruise, Jennifer</span></p>
+              <div className="rating">
+                <button>Top rated movie #65</button>
+                <strong>Award 9 Nominations</strong>
+                
               </div>
             </div>
-          </Card>
-        
+           </div>
+           <div className="right-box">
+              <button><img src={Bookmarks} alt="" /> See Showtimes</button>
+              <button><img src={List} alt="" /> More watch options</button>
+              <div className="best-of-the-month">
+                <div className="poster-box">
+                  <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
+                  <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
+                  <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
+                </div>
+              </div>
+           </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

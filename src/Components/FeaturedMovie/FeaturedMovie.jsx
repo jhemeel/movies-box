@@ -10,7 +10,6 @@ export default function FeaturedMovie() {
     try {
       const { data } = await tmdb.get("discover/movie");
       setMovies(data.results.slice(0, 10));
-      console.log(data.results);
     } catch (err) {
       console.log(err);
     }
