@@ -126,7 +126,7 @@ export default function Detail() {
               <button>Action</button>
               <button>Drama</button>
             </div>
-            </div>
+          </div>
            
             <div className="movie-meta-items">
               <span className="star-container"><img className="star" src={star} alt="" /> {vote_average}</span>

@@ -155,7 +155,7 @@
     height: 100%;
     border-radius: 16px;
     object-fit: cover;
-    position: center center;
+    object-position:  center;
 
 
 }
@@ -405,7 +405,7 @@
 
     .brandname{
         margin-top: initial;
-
+        width: unset;
     }
 
     .sidebar .menu{
@@ -420,6 +420,19 @@
 
     .sidebar .ticket{
         display: none;
+    }
+
+    .movie-meta > div:first-child{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        
+    }
+
+    .movie-meta{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
 
     .movie-description{
