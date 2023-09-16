@@ -120,7 +120,7 @@ export default function Detail() {
             <div>
             <span className="movie-meta-items" data-testid = "movie-title">{title}</span>
             <span className="movie-meta-items" data-testid =  "movie-release-date">{utc_time}</span>
-            <span className="movie-meta-items hide-mobile">PG - 13</span>
+            <span className="movie-meta-items">PG - 13</span>
             <span className="movie-meta-items runtime" data-testid= "movie-runtime">{runtime} mins</span>
             <div className="movie-meta-items">
               <button>Action</button>
@@ -130,7 +130,7 @@ export default function Detail() {
            
             <div className="movie-meta-items">
               <span className="star-container"><img className="star" src={star} alt="" /> {vote_average}</span>
-              <span className="hide-mobile">| {vote_count}</span>
+              <span className>| {vote_count}</span>
             </div>
           </div>
           <div className="movie-description">
