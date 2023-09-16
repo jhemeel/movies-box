@@ -504,5 +504,14 @@
        
         
     }
+    .rating{
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .rating strong{
+        background-color: #BE123C;
+
+    }
     
 }
