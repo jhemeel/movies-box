@@ -207,6 +207,7 @@
 
 .movie-meta > div:first-child{
     display: inherit;
+    align-items: center;
     gap: 2vw;
     
 }
@@ -214,6 +215,9 @@
     color: #333333;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
+}
+.movie-meta-items.runtime{
+    width: 100px;
 }
 
 .movie-meta-items button{
@@ -300,6 +304,11 @@
     color: #ffffff;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
+}
+.rating button:hover{
+    background-color: #BE123C10;
+    color: #BE123C;
 }
 
 .rating strong{
@@ -323,14 +332,19 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .right-box button:first-child{
     background-color: #BE123C;
     border: none;
     color: white;
+}
 
-
+.right-box button:first-child:hover
+{
+    background-color: #BE123C10;
+    color: #BE123C;
 }
 
 .right-box button:nth-child(2){
@@ -339,7 +353,10 @@
     color: #33333390;
 
 }
-
+.right-box button:nth-child(2):hover{
+    background-color: #BE123C;
+    color: #ffffff;
+}
 .poster-box{
     width: 100%;
     height: 230px;

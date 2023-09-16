@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Card } from "@mui/material";
-import { ArrowDownward, Book, Camera, Home, Movie } from "@mui/icons-material";
 import tmdb from "../../Components/Api/tmdb";
+import Runtime from "../../Components/Runtime/Runtime";
 import "./details.css";
 import img from "../../Components/Navbar/assets/images/tv.svg";
 import home from "../../Assets/Home.svg";
@@ -19,6 +18,7 @@ import Play from "../../Assets/Play.svg";
 import PngItem from "../../Assets/PngItem.svg";
 import star from "../../Assets/Star.svg";
 import TV_Show from "../../Assets/TV_Show.svg";
+import Two_Tickets from "../../Assets/Two_Tickets.svg";
 
 
 export default function Detail() {
@@ -39,6 +39,13 @@ export default function Detail() {
   }, []);
 
   const { title, release_date, poster_path, overview, vote_count, vote_average } = movie;
+  
+
+  // date to utc
+  const local_time = new Date(release_date)
+  const utc_time = local_time.toUTCString();
+
+
 
   return (
     <div className="movieDetail-container">
@@ -105,15 +112,15 @@ export default function Detail() {
                 <img src={Play} alt="" />
                 </div>
               </span>
-              <img className="poster" src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
+              <img className="poster" data-testid= "movie-poster" src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
             </div>
           </div>
           <div className="movie-meta">
             <div>
-            <span className="movie-meta-items">{title}</span>
-            <span className="movie-meta-items">{release_date}</span>
+            <span className="movie-meta-items" data-testid = "movie-title">{title}</span>
+            <span className="movie-meta-items" data-testid =  "movie-release-date">{utc_time}</span>
             <span className="movie-meta-items hide-mobile">PG - 13</span>
-            <span className="movie-meta-items hide-mobile">2h 10m</span>
+            <span className="movie-meta-items runtime" data-testid= "movie-runtime">{Runtime()}</span>
             <div className="movie-meta-items">
               <button>Action</button>
               <button>Drama</button>
@@ -128,7 +135,7 @@ export default function Detail() {
           <div className="movie-description">
            <div className="left-box">
            <div className="overview">
-              <p>{overview}</p>
+              <p data-testid = "movie-overview">{overview}</p>
             </div>
             <div className="extra-description">
               <p>Directors : <span>Josep Josinski</span></p>
@@ -142,7 +149,7 @@ export default function Detail() {
             </div>
            </div>
            <div className="right-box">
-              <button><img src={Bookmarks} alt="" /> See Showtimes</button>
+              <button><img src={Two_Tickets} alt="" /> See Showtimes</button>
               <button><img src={List} alt="" /> More watch options</button>
               <div className="best-of-the-month">
                 <div className="poster-box">

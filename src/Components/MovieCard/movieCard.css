@@ -1,12 +1,12 @@
 .moviecard{
     width: 250px;
     height: 490px;
-    display: grid;
     border-radius: 6px;
+    margin: auto;
 }
 
 .movie-image-box{
-    width: 250px;
+    min-width: 250px;
     height: 370px;
 }
 
@@ -19,6 +19,20 @@
 }
 
 .movie-detail-box{
-    color: grey;
-    /* height: 200px; */
+    display: grid;
+    gap: 15px;
+}
+
+.movie-detail-box .release-date{
+    font-size: 12px;
+    color: #9CA3AF;
+    font-weight: 700;
+    line-height: 15.62px;
+    padding-top: 10px;
+}
+
+.movie-detail-box .title{
+    font-size: 18px;
+    line-height: 23.44px;
+    color: #111827;
 }
