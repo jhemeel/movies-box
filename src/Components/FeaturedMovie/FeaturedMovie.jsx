@@ -8,7 +8,7 @@ export default function FeaturedMovie() {
 
   const getMovies = async () => {
     try {
-      const { data } = await tmdb.get("discover/movie");
+      const { data } = await tmdb.get("movie/top_rated");
       setMovies(data.results.slice(0, 10));
     } catch (err) {
       console.log(err);

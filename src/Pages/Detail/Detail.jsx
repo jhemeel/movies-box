@@ -28,6 +28,7 @@ export default function Detail() {
   const getMovie = async () => {
     try {
       const { data } = await tmdb.get(`movie/${id}`);
+      console.log(data)
       setMovie(data);
     } catch (err) {
       console.log(err);
