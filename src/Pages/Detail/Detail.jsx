@@ -39,7 +39,7 @@ export default function Detail() {
     getMovie();
   }, []);
 
-  const { title, release_date, poster_path, overview, vote_count, vote_average, runtime } = movie;
+  const { title, release_date, poster_path, overview, vote_count, vote_average, runtime} = movie;
   
 
   // date to utc
@@ -60,25 +60,29 @@ export default function Detail() {
             <li className="menu-list">
               <a href="/">
                 <img src={home} alt="" />
-                Home
+                <span>Home</span>
               </a>
             </li>
             <li className="menu-list">
               <a href="">
                 <img src={Projector} alt="" />
-                Movies
+                <span> Movies </span>
               </a>
             </li>
             <li className="menu-list">
               <a href="">
                 <img src={TV_Show} alt="" />
+                <span>
                 TV Series
+                </span>
               </a>
             </li>
             <li className="menu-list">
               <a href="">
                 <img src={Calender} alt="" />
+                <span>
                 Upcoming
+                </span>
               </a>
             </li>
           </ul>
@@ -94,8 +98,7 @@ export default function Detail() {
 
           <div className="logout">
             <button>
-              {" "}
-              <img src={logout} alt="" /> Logout
+              <img src={logout} alt="" /><span> Logout</span>
             </button>
           </div>
           <span className="hamburger">
