@@ -23,8 +23,7 @@ export default function Navbar({setSearchKey, searchMovies}) {
                 placeholder="What do you want to watch?"
                 onChange={(e) => setSearchKey(e.target.value)}
               />
-              <Search className="search" role="submit" />
-              
+                <button><Search className="search" role="submit" /></button>              
             </form>
           
           </li>
