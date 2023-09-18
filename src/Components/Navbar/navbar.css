@@ -76,6 +76,10 @@
   cursor: pointer;
   color: #d1d5db;
 }
+.search-btn{
+  /* visibility: hidden; */
+  outline: none;
+}
 .navbarItemMenu {
   display: flex;
   flex-direction: column;
