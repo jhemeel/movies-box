@@ -46,7 +46,6 @@
 }
 
 .navbarItemSearch {
-  /* width: 525px; */
   position: relative;
 }
 .navbarItemSearch input[type="search"] {
@@ -59,8 +58,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-
-  padding: 6px 10px 6px 10px;
+  padding: 6px 30px 6px 10px;
   background-color: transparent;
 }
 .navbarItemSearch input[type="search"]:focus {
@@ -77,8 +75,8 @@
   color: #d1d5db;
 }
 .search-btn{
-  /* visibility: hidden; */
   outline: none;
+  border: none;
 }
 .navbarItemMenu {
   display: flex;
